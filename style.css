@@ -56,7 +56,6 @@ a:focus {
 .search-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid teal;
   position: relative;
   align-content: center;
   align-items: center;
@@ -86,21 +85,33 @@ a:focus {
 
 .sidebar {
   background-color: #f320c9;
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar .side-content {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  font-weight: normal;
+.side-content {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  background-color: #f320c9;
+  color: white;
+  margin: -1.75rem 0;
+}
+
+.side-content.settings {
+  margin-top: 1.5rem;
+}
+
+.side-content-label {
+  font-size: 2rem;
 }
 
 .sidebar-header {
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
   align-items: center;
-  border: 1px solid gray;
+  color: white;
+  gap: 1rem;
 }
 
 .article {
@@ -154,18 +165,72 @@ a:focus {
 }
 
 .announcements {
-  margin-top: 2rem;
+  margin-top: 4.5rem;
   grid-column: 4 / 6;
   grid-row: 2 / 4;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.announcements-h2 {
+  /* position: absolute;
+  top: -15%;
+  left: -0%; */
+  margin-top: -4rem;
+  margin-left: -1rem;
+  color: black;
+  font-size: 1.75rem;
+}
+
+.announcements-heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.announcements-p {
+  font-size: 1rem;
+}
+
+.announcements-item-container.first {
+  margin-top: 1.75rem;
+}
+
+.announcements-hr {
+  border: 1px solid white;
+  margin: 0 1rem;
 }
 
 .trending {
-  margin-top: -1rem;
+  margin-top: 4rem;
   grid-column: 4 / 6;
   grid-row: 4 / 6;
 }
 
-.header {
+.trending-h2 {
+  font-size: 1.75rem;
+  color: black;
+  text-align: left;
+  margin-top: -4.5rem;
+  margin-left: -1rem;
+}
+
+.trending-item-container {
+  display: flex;
+  align-items: center;
+}
+
+.trending-item-container.one {
+  margin-top: 1.4rem;
+}
+
+.profile-name,
+.profile-description {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.profile-description {
+  font-style: italic;
 }
 
 .logo {
@@ -177,12 +242,6 @@ a:focus {
   grid-column: 1 / 2;
   /* display: grid; */
   gap: 50px;
-}
-
-.side-content,
-.photo {
-  display: grid;
-  align-items: center;
 }
 
 .nav ul {
